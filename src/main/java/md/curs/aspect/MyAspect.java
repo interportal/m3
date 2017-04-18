@@ -6,13 +6,12 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
-import org.springframework.stereotype.Component;
 
 /**
  * Created by MG
  */
 @Aspect
-@Component
+//@Component
 public class MyAspect {
 
     // All methods from controller package

@@ -10,6 +10,9 @@
 <body>
 <div class="container">
     <jsp:include page="menu.jsp"/>
+
+    <h4>Hello, ${authUser.name}</h4>
+
     <h3>Numbers</h3>
     <div>
         <%-- Print numbers from 0 to 100 in step of 5 --%>

@@ -1,3 +1,4 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -18,27 +19,33 @@
     </div>
 
     <h3>Edit User information:</h3>
-    <form action="${pageContext.request.contextPath}/jsp" method="post">
 
+
+    <spring:form action="${pageContext.request.contextPath}/users/save" method="post" commandName="user">
+        <spring:input path="id" type="hidden"/>
         <%--Examples--%>
         <div class="form-group">
             <label for="name">Name</label>
-            <input id="name" name="name" type="text" class="form-control" value="${user.name}">
+            <spring:input path="name" type="text" class="form-control" />
+            <spring:errors path="name" cssClass="bg-danger" />
         </div>
         <div class="form-group">
             <label for="surname">Surname</label>
-            <input id="surname" name="surname" type="text" class="form-control" value="${user.surname}">
+            <spring:input path="surname" type="text" class="form-control" />
+            <spring:errors path="surname" cssClass="bg-danger" />
         </div>
         <div class="form-group">
             <label for="email">Email</label>
-            <input id="email" name="email" type="email" class="form-control" value="${user.email}">
+            <spring:input path="email" type="email" class="form-control" />
+            <spring:errors path="email" cssClass="bg-danger" />
         </div>
         <div class="form-group">
             <label for="age">Age</label>
-            <input id="age" name="age" type="number" class="form-control" value="${user.age}">
+            <spring:input path="age" type="number" class="form-control" />
+            <spring:errors path="age" cssClass="bg-danger" />
         </div>
         <input type="submit" class="btn btn-default" value="Submit">
-    </form>
+    </spring:form>
 </div>
 
 <%-- Load JS libraries --%>

@@ -11,11 +11,4 @@ import org.springframework.context.annotation.Scope;
  */
 @Configuration
 public class AppConfig {
-
-    @Bean
-    @Scope("prototype")
-    User mockUser() {
-        return new User("MockName", "MockSurname",
-                18);
-    }
 }

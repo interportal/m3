@@ -8,6 +8,8 @@
     <context:component-scan base-package="md.curs"/>
     <aop:aspectj-autoproxy/>
 
+    <bean id="validator" class="org.springframework.validation.beanvalidation.LocalValidatorFactoryBean"/>
+
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.UrlBasedViewResolver">
         <property name="viewClass"
@@ -15,11 +17,4 @@
         <property name="prefix" value="/WEB-INF/view/"/>
         <property name="suffix" value=".jsp"/>
     </bean>
-
-    <bean id="mockUser2" class="md.curs.model.User">
-        <constructor-arg index="0" value="MockName"/>
-        <constructor-arg index="1" value="MockSurname"/>
-        <constructor-arg index="2" value="21"/>
-    </bean>
-
 </beans>
