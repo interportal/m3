@@ -21,7 +21,7 @@
     <h3>Edit User information:</h3>
 
 
-    <spring:form action="${pageContext.request.contextPath}/users/save" method="post" commandName="user">
+    <spring:form action="${pageContext.request.contextPath}/users/save" method="post" modelAttribute="user">
         <spring:input path="id" type="hidden"/>
         <%--Examples--%>
         <div class="form-group">
